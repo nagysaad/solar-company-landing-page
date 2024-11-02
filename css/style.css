@@ -1,0 +1,987 @@
+:root{
+    --greenBackGround : #0B9586;
+    --Nav-box-shadow:#0000000F;
+    --btn-yellow :  #FFBB1C;
+    --listItem-green : #84BD3A;
+    --primaryWhite: #FFFFFF;
+    --primaryBlack: #101828;
+    --btn-black: #2A3334;
+    --progres-black: #575757;
+    --Font: "Inter", sans-serif;
+    --SecondaryWhite:  #475467;
+    --section4-background :#00000091;
+    --section5-background :#FFBB1C0D;
+    --section7-right-background :#3CAB900F;
+    --FooterBackground: #283646;
+    --FooterTextColor: #92989F;
+    --FooterBtnTextColor: #B3BDC7;
+    
+}
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
+/* Start header */
+header{
+    width: 100%;
+    text-align: center;
+}
+
+header nav{
+    display: flex;
+    flex-wrap: wrap;
+    background-color: var(--greenBackGround);
+    justify-content: space-around;
+    padding: 1em 0;
+    color: var(--primaryWhite);
+}
+header nav a{
+    color: var(--primaryWhite);
+}
+header nav .logo { 
+    display: flex;
+}
+header nav .logo span {
+    background-image: url(../images/image\ 9.png);
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    width: 6em;
+    opacity: .9;
+    height: 2em;
+}
+
+header nav .logo span::before {
+    
+    content: "";
+    position: absolute;
+    display: block;
+
+    opacity: .9;
+    width: 100%;
+    height: 100%;
+    background-color: #0a8678;
+    mix-blend-mode: multiply;
+}
+
+header nav  ul{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5em;
+    justify-content: space-evenly;
+}
+header nav  ul li{
+    transition: .3s;
+       font-family: Inter;
+font-size: 18px;
+font-weight: 400;
+
+}
+header nav  ul li:hover{
+
+    padding: .5em .7em;
+    border-radius: 4px;
+    box-shadow:3px 3px 3px   #0000004D
+}
+
+header nav .call{
+    display: flex;
+    flex-direction: column;
+    gap: .1em;
+    font-size: 18px;
+}
+
+header nav .call a{
+font-size: 24px;
+font-weight: 700;
+}
+@media screen and (max-width:560px) {
+    header nav {
+        flex-direction: column;
+        gap: 1em;
+        align-items: center;
+    }
+   
+    header nav  ul{
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        gap: 1em;
+        justify-content: start;
+    }
+    header nav .call a{
+        font-size: 1em;
+    }
+}
+
+/* ////////////////////////////////////////////////////////////// */
+/*   Start Hero */
+.hero{
+    background: url(../images/solar-panels-meadow\ 1.png); 
+    width: 100%;
+    height: 73vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position-y:bottom ;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: start;
+    padding: 0 7%;
+}
+
+.hero .prog{
+    color: var(--primaryWhite);
+    display: flex;
+    gap: 12px;
+    width: 50%;
+}
+
+.hero .prog .line {
+    position: relative;
+    margin-top: 5px;
+    background-color: var(--progres-black);
+    
+    height: 4px;
+    width: 30%;
+}
+
+.hero .prog .line::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: var(--primaryWhite) ;
+
+    height: 4px;
+    width: 40%;
+}
+
+.hero .content{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    height: 20em;
+    color: var(--primaryWhite);
+    font-family: "Inter", sans-serif;
+    text-align: left;
+}
+.hero .content h1{
+    font-size: 2.3em;
+    width: 70%;
+}
+
+.hero .content p{
+    font-size: 1.1em;
+    line-height: 1.9em;
+    width: 70%;
+}
+.hero .butts{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.hero .butts button{
+    padding: 1em;
+    width: 12em;
+    font-weight: 400;
+    border-radius: 109px;
+    border: none;
+    text-transform: capitalize;
+    transition: .3s;
+
+}
+.hero .butts button:hover,.bt-yellow:hover{
+    cursor: pointer;
+    opacity: .7;
+}
+
+.hero .butts .bt1{
+    background-color: var(--greenBackGround);
+    color: var(--primaryWhite);
+}
+ .bt-yellow{
+    background-color: var(--btn-yellow);
+    color: var(--btn-black);
+    border-radius: 109px;
+    border: none;
+    transition: .3s;
+
+}
+
+@media screen and (max-width:553px) {
+    /* .hero{
+        height: 100vh;
+    } */
+    .hero .content h1 {
+    width: 100%;
+    font-size: 80%;
+}
+
+
+.hero .content p{
+    width: 100%;
+    font-size: 90%;
+
+}
+    
+}
+
+/* ////////////////////////////////////////////////////////////// */
+/* Start Sections */
+
+section.page-content{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    text-align: center;
+
+}
+
+section.page-content .Section1{
+    display: flex;
+    flex-direction: row;
+    gap: 5%;
+    text-align: left;
+    justify-content: space-between;
+    padding: 6%;
+
+}
+
+section.page-content .Section1 .left{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+    font-family: var(--Font);
+
+}
+
+section.page-content .Section1 .left h1{
+    font-weight: 600;
+    font-size: 2em;
+}
+
+section.page-content .Section1 .left p{
+    font-weight: 400;
+    font-size: .7em;
+    line-height: 24px;
+    margin-bottom: 6em;
+}
+section.page-content .Section1 .left ul{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    font-size: .9em;
+    font-weight: 600;
+}
+section.page-content .Section1 .left ul span{
+    color: var(--listItem-green);
+    margin-right: .5em;
+    font-weight: 700;
+    font-size: .8em;
+    letter-spacing: 4px;
+}
+section.page-content .Section1 .right{
+    width: 50%;
+    position: relative;
+
+}
+section.page-content .Section1 .right img{
+     width: 100%;
+    height: 80%;
+}
+
+section.page-content .Section1 .right svg {
+    position: absolute;
+    bottom: 30%;
+    left: -40.5%;
+    z-index: 2;          width: 100%;
+
+    height: 25%;
+
+
+
+}
+
+@media screen and (max-width:915px) {
+    section.page-content .Section1{
+        flex-direction: column;
+        gap: 10px;
+    }
+    section.page-content .Section1 .left{
+        width: 100%;
+        font-size: 90%;
+    }
+    section.page-content .Section1 .left p{
+        margin-bottom: 1em  ;
+    }
+    section.page-content .Section1 .left ul li{
+  
+       width: 100%;
+    }
+    
+}
+/* ////////////////////////////////////////////////////////////// */
+/* Start section2 */
+
+section.page-content .section2{
+    background: url(../images/8116\ 1.png);
+    background-position: center; 
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position-x:right ;
+    height: 505px;
+    display: flex;    
+    flex-direction: column;
+    align-items: start;
+    justify-content:space-evenly;
+    padding: 6%;
+}
+
+section.page-content .section2 div{
+    display: flex;    
+    flex-direction: column;
+    justify-content: space-around;
+    height: 100%;
+    font-family: 'Inter';
+    text-align: left;
+
+}
+
+section.page-content .section2 div h1{
+font-weight: 600;
+font-size: 42px;
+color: var(--primaryWhite);
+
+}
+
+section.page-content .section2 div p{
+    font-weight: 500;
+    font-size: 20px;
+    color: var(--primaryWhite);
+    width: 60%;
+    line-height: 28px;
+    }
+
+    section.page-content .section2 div button{
+        height: 41px;
+        width: 11em;
+    }
+
+    @media screen and (max-width:725px) {
+        section.page-content .section2 div h1{
+            font-size: 100%
+
+            }
+            
+            section.page-content .section2 div p{
+                font-size: 100%
+                
+                }
+        
+    }
+    /* ////////////////////////////////////////////////////////////// */
+/* Start section3 */
+
+section.page-content .section3{
+padding: 6%;
+font-family: 'Inter';
+display: flex;
+flex-direction: column;
+gap: 4em;
+
+}
+
+section.page-content .section3 .title h1{
+    font-weight: 600;
+font-size: 2.2em;
+color: var(--primaryBlack);
+}
+
+section.page-content .section3 .title p{
+    font-weight: 400;
+font-size: 1em;
+color: var(--progres-black);
+}
+
+
+section.page-content .section3 .cards-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit , minmax(300px , 1fr));
+    gap: 22px;
+    text-align: left;
+
+}
+
+section.page-content .section3 .cards-container .card{
+    
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    font-family: var(--Font);
+    border: 1px solid var(--greenBackGround);
+    border-radius: 6px;
+    padding: 15px;
+
+}
+
+section.page-content .section3 .cards-container .card h1{
+   font-weight: 600;
+   font-size: 1.3em;
+}
+section.page-content .section3 .cards-container .card p{
+    line-height: 24px;
+    font-weight: 400;
+    font-size: 16px;
+
+}
+
+section.page-content .section3 .cards-container .card span
+,section.page-content .section5 .right span
+{
+    display: flex;
+    gap: 10px;
+    color: var(--greenBackGround);
+    width: 70%;
+    transition: .3s;
+}
+section.page-content .section3 .cards-container .card span:hover,
+section.page-content .section5 .right span
+:hover{
+    cursor: pointer;
+    transform: scale(1.1);
+}
+section.page-content .section3 .cards-container .card span svg,section.page-content .section5 .right span{
+    align-self: center;}
+
+@media screen and (max-width:850px) {
+    section.page-content .section3 .cards-container .card{
+        width: 100%;    
+    }
+    section.page-content .section3 .cards-container .card p{
+        font-size: 90%;  
+    }
+ 
+ 
+    
+}
+  /* ////////////////////////////////////////////////////////////// */
+/* Start section4 */
+
+section.page-content .section4{
+    display: flex;
+    background: url(../images/8116\ 1\ \(1\).png);
+   background-size: cover;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    height: 505px;
+    font-family: var(--Font);
+
+}
+section.page-content .section4 div{
+  position: relative;
+  width: 60%;
+  height: 15em;
+  color: var(--primaryWhite);
+  padding: 1em;
+  overflow: hidden;   
+
+}
+section.page-content .section4 div::before {
+    content: "";
+    width: 100%;
+    height: 100%;
+    left: 0;
+    opacity: .7;
+    border-radius: 9px;
+    position: absolute;
+    top: 0;
+    background-color: #000000CC;
+  }
+
+section.page-content .section4 h1{
+  filter: brightness(550%);
+
+    font-weight: 600;
+    font-size: 2.2em;
+    margin-bottom: .9em;
+}
+
+section.page-content .section4 p{
+    filter: brightness(550%);
+
+    font-weight: 500;
+    line-height: 28px;
+    font-size: 1em;
+
+}
+
+@media screen and (max-width:1000px) {
+    section.page-content .section4 h1{
+        font-size: 100%;;
+      }
+      
+      section.page-content .section4 div p{
+          font-size: 80%;
+      
+      
+      }
+}
+
+@media screen and (max-width:630px) {
+    section.page-content .section4 h1{
+        font-size: 100%;;
+      }
+      
+      section.page-content .section4 div p{
+          font-size: 75%;
+      
+      
+      }
+      section.page-content .section4 div{
+        width: 70%;
+        height: 20em;
+      }
+}
+
+ /* ////////////////////////////////////////////////////////////// */
+/* Start section5 */
+
+section.page-content .section5{
+    display: flex;
+    padding: 5em;
+font: 1em sans-serif;  
+  font-family: var(--Font);
+    text-align: left;
+        background-color: var(--section5-background);
+}
+section.page-content .section5 .left{
+    display: flex;
+    flex-direction: column;
+    width: 35%;
+
+    gap: 1em;
+}
+
+section.page-content .section5 .left h1{
+  
+      font-weight: 600;
+      font-size: 2.2em;
+  }
+  
+  section.page-content .section5 .left p{
+  
+      font-weight: 500;
+      line-height: 28px;
+      font-size: 1em;
+  
+  }
+section.page-content .section5 .right{
+    
+    display: grid;
+    grid-template-columns:  repeat(auto-fit , minmax(400px , 1fr));
+    gap: 16px;
+
+}
+
+@media(max-width:470px){
+    section.page-content .section5 .right{
+    
+        
+        grid-template-columns:  repeat(auto-fit , minmax(250px , 1fr));
+       
+    
+    }
+}
+
+section.page-content .section5 .right .card{
+    padding: 2em;
+    height: fit-content ;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5em;
+    border: 1px solid #3CAB90;
+    border-radius: 7px;
+
+}
+section.page-content .section5 .right .card img{
+    width: 100%;
+    position: relative;
+    height: 4.5em;
+    border-radius: 9px;
+}
+
+section.page-content .section5 .right h1{
+  
+    font-weight: 600;
+    font-size: 1.2em;
+}
+
+section.page-content .section5 .right p{
+    font-weight: 500;
+    line-height: 28px;
+    font-size: 1em;
+}
+
+
+section.page-content .section5 .right span  {
+    transition: .3s;
+}
+section.page-content .section5 .right span svg {
+    align-self: center;
+}
+section.page-content .section5 .right span:hover{
+    scale: 1.2;
+}
+
+
+@media screen and (max-width:1215px) {
+   
+section.page-content .section5 .left{
+    width: 100%;
+
+}
+section.page-content .section5 {
+    flex-direction: column;
+    gap: 2em;
+}
+
+}
+
+@media screen and (max-width:890px) {
+    section.page-content .section5{
+        padding: 5%;
+    }
+   
+section.page-content .section5 .left{
+    width: 100%;
+
+}
+section.page-content .section5 {
+    flex-direction: column;
+    gap: 2em;
+}
+section.page-content .section5 .right span  {
+width: 100%;}
+
+}
+
+/* /////////////////////////////////////////////////////////////////////////////////////////////////////////////3 --> */
+/*  Start Section6  */
+
+section.page-content .section6{
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+    padding: 3em 0;
+    font-family: var(--Font);
+    flex-wrap: wrap;
+    /* height: 719px; */
+} 
+
+section.page-content .section6 .title h1{
+font-size: 2.2em;
+font-weight: 600;
+margin-bottom: 1em;
+}
+
+section.page-content .section6 .title p{
+    font-size: 1.2em;
+    font-weight: 400;
+    color: var(--progres-black);
+}
+
+section.page-content .section6 .content{
+    display: grid;
+    grid-template-columns: repeat(auto-fit , minmax(250px , 1fr));
+    gap: 22px;
+    text-align: left;
+    padding: 0 18%;
+}
+
+section.page-content .section6 .content .card{
+    display: flex;
+    /* width: 20em; */
+    gap: 2em;
+    flex-direction: column;
+    padding: 2em;
+    border: 1px solid #3CAB90;
+    border-radius: 9px;
+    background-color: #3CAB900D;
+}
+section.page-content .section6 .content .card h1{
+font-size: 1.2em;
+font-weight: 600;
+}
+
+section.page-content .section6 .content .card p{
+    font-size: 1em;
+    font-weight: 400;
+    line-height: 24px;
+    }
+   
+    @media screen and (max-width:445px) {
+        section.page-content .section6 .content .card{
+            width: 100%;
+            padding: 10%;
+        }  
+        section.page-content .section6 .content{
+     
+            padding: 0 2%;
+        }
+
+    }
+/* ////////////////////////////////////////////////////////////////////////////////////////////////////////////6 --> */
+
+/* <!-- Start Section7 --> */
+
+section.page-content .section7{
+    display: flex;
+    flex-wrap: wrap ;
+    justify-content: center;
+    padding: 2em;
+    gap: 2em;
+    font-family: var(--Font);
+    text-align: left;
+} 
+section.page-content .section7 .left{
+    display: flex;
+    width: 25em;
+    justify-content: center;
+    flex-direction: column;
+    padding: 2em;
+    gap: 2em;
+
+}  
+
+section.page-content .section7 .left h1{
+font-size: 2.2em;
+font-weight: 700;
+}
+section.page-content .section7 .left p{
+    font-size: 1em;
+    font-weight: 400;
+    }
+
+
+section.page-content .section7 .right{
+    display: flex;
+    width: 45em;
+    border-radius: 11px;
+
+    background-color:#3CAB900F;
+    flex-direction: column;
+    padding: 2em;
+    gap: 2em;
+}  
+
+section.page-content .section7 .right .sub-title{
+    display: flex;
+    justify-content: space-between  ;
+     
+}  
+
+section.page-content .section7 .right .content p {
+    width: 85%;
+    font-size: 1.3em;
+    font-weight: 400;
+    line-height: 36px;     
+}  
+ 
+section.page-content .section7 .right .comment{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1em;
+    justify-content: space-between  ;
+     
+}  
+section.page-content .section7 .right .comment .name{
+    display: flex;
+    flex-wrap: wrap;
+
+    gap: 1em;
+}
+
+section.page-content .section7 .right .comment .name  h2{
+    margin-bottom: 1em;
+font-size: 1em;
+font-weight: 700;
+}
+    
+section.page-content .section7 .right .comment .name  h4{
+    font-size: 1em;
+font-weight: 400;
+}
+
+@media screen and (max-width:1090px ) {
+    section.page-content .section7{  
+        justify-content: flex-start;
+    
+}
+
+}
+@media screen and (max-width:390px) {
+    section.page-content .section7{
+        padding: 0em;
+    } 
+
+    section.page-content .section7 .right .comment .name{
+        font-size: 90%;
+    }
+    section.page-content .section7 .right .content p {
+        font-size: 100%;
+        width: 100%;
+         
+    }  
+    section.page-content .section7 .left h1{
+        font-size:1.5em;
+
+    }
+    
+}
+
+/* /////////////////////////////////////////////////////////////////////////////////////////////////////////////s --> */
+ 
+footer{
+    width: 100%;
+    background-color: var(--FooterBackground);
+    display: flex;
+    flex-direction: column;
+    padding: 5em;
+    font-family: var(--Font);
+}
+
+footer .top{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    width: 100%;
+
+}
+
+footer .top .left img{
+    margin-bottom: 2.5em;
+
+}
+
+footer .top .left ul{
+display: flex;
+flex-wrap: wrap;
+width: 40em;
+gap: 2em;
+font-size: 1em;
+color: var(--primaryWhite);
+font-weight: 400;
+
+
+}
+footer .top .left ul li{
+transition: .3s;     
+     }
+footer .top .left ul li:hover{
+    cursor: pointer;
+   color: var(--FooterTextColor);
+
+    }
+
+    footer .top .right{
+        margin-top: 2em;
+        display: flex;
+        flex-direction: column;
+        gap: 1em;
+    }
+
+    footer .top .right h4{
+font-size: 1em;
+font-weight: 400;
+    color: var(--primaryWhite);
+    }
+
+    footer .top .right .button{
+        display: flex;
+        flex-wrap: wrap;
+       padding: 1em ;
+       position: relative;
+       width: 100%;
+         color: var(--FooterTextColor);
+        background-color: #B3BDC7;
+        height: 3em;
+        border-radius: 2em;
+    }
+
+    footer .top .right .button p{
+        font-size: 80%;
+    }
+    footer .top .right .button button{
+        position: absolute;
+        font-size: 100%;
+        width: 35%;
+        top: 0;
+        right: 0;
+        font-weight: 400;
+        height: 100%;
+        color: var(--primaryWhite);
+        text-align: center;
+             }
+
+
+              footer .line{
+               align-self: center;        
+                 width: 70%;
+                height: 2px;
+                margin: 2em 0;
+                background-color: #71777D;
+              }
+
+footer .bottom{
+    display: flex;
+    flex-wrap: wrap;
+     gap: 1em;
+    justify-content: space-around;
+    font-size: 12px;
+    color: var(--FooterTextColor);
+}
+
+footer .bottom ul{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2em;
+font-size: 12px;
+}
+
+@media screen and (max-width:590px) {
+    footer .top .left ul{
+        width: 40%;
+    }
+}
+
+@media screen and (max-width:328px) {
+
+    footer .top .left img{
+      width: 100%;
+    
+    }
+    footer .top .left ul a{
+        font-size: 90%;
+    }
+    footer{
+     
+        padding:2em;
+    }
+    footer .top .right .button p{
+        font-size: 70%;
+    }
+ 
+    footer .top .right .button button{
+        font-size: 80%;
+    } 
+    
+}
+    
